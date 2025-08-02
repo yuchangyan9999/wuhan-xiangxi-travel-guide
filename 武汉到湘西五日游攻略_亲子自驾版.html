@@ -1,0 +1,2075 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>武汉到湘西五日游攻略 - 亲子自驾版 | 探索长沙张家界凤凰古城</title>
+    <meta name="description" content="专为带小孩家庭设计的武汉到湘西五日游攻略，沿途探索长沙、张家界、凤凰古城等精华景点，深入体验湘西的自然风光和民族文化">
+    <meta name="keywords" content="武汉到湘西,亲子自驾攻略,张家界旅游,凤凰古城,长沙旅游,天门山,武陵源,亲子游">
+    <!-- 高德地图API -->
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c&plugin=AMap.Driving,AMap.Marker,AMap.InfoWindow,AMap.Polyline,AMap.AnimationMarker"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .drive-highlight {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .main-content {
+            background: white;
+            margin: 2rem 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .section {
+            padding: 2rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section h2 {
+            color: #2a5298;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+        
+        .section h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+        
+        .route-info {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+        }
+        
+        .route-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .route-card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1.5rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .route-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-left: 1rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 1.5rem;
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+        
+        .day-header {
+            color: #2a5298;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .day-activities {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .activity {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .activity-time {
+            font-weight: bold;
+            color: #764ba2;
+            margin-bottom: 0.5rem;
+        }
+        
+        .activity-content {
+            color: #555;
+        }
+        
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .attraction-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .attraction-image {
+            height: 200px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .attraction-content {
+            padding: 1.5rem;
+        }
+        
+        .attraction-title {
+            font-size: 1.3rem;
+            color: #2a5298;
+            margin-bottom: 0.5rem;
+        }
+        
+        .attraction-description {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .attraction-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .highlight-tag {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .budget-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .budget-table th,
+        .budget-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .budget-table th {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-weight: bold;
+        }
+        
+        .budget-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .price-highlight {
+            font-weight: bold;
+            color: #e91e63;
+        }
+        
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .tip-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .tip-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tip-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            margin: 5px;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            text-decoration: none;
+            color: white;
+        }
+
+        .attraction-navigation {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .section {
+                padding: 1rem;
+            }
+            
+            .timeline {
+                padding-left: 1rem;
+            }
+            
+            .timeline-item {
+                margin-left: 0.5rem;
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .section {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+                                        <h1>🚗 武汉到湘西五日游攻略</h1>
+                            <p class="subtitle">亲子自驾版 · 探索长沙张家界凤凰古城</p>
+            <div class="drive-highlight">
+                <strong>🚀 亲子自驾优势：</strong>自由灵活，沿途探索长沙、张家界、凤凰古城美景，深度体验湘西风情，适合带小孩家庭出行
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <ul>
+                <li><a href="#overview">行程概览</a></li>
+                <li><a href="#route">自驾路线</a></li>
+                <li><a href="#itinerary">详细行程</a></li>
+                <li><a href="#attractions">精选景点</a></li>
+                <li><a href="#food">美食指南</a></li>
+                <li><a href="#accommodation">住宿推荐</a></li>
+                <li><a href="#budget">费用预算</a></li>
+                <li><a href="#tips">实用贴士</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <section id="overview" class="section">
+                <h2>🎯 行程概览</h2>
+                <div class="route-info">
+                                                <h3>🏔️ 湘西深度五日游 - 亲子自驾山水之旅</h3>
+                            <p>专为带小孩家庭设计的湘西深度体验路线，沿途探索长沙、张家界、凤凰古城等精华景点，深入体验湘西的自然风光和民族文化。</p>
+                    <div class="route-details">
+                        <div class="route-card">
+                            <div class="route-title">📍 主要目的地</div>
+                            <p>武汉 → 长沙 → 张家界 → 天门山 → 凤凰古城 → 返程</p>
+                        </div>
+                        <div class="route-card">
+                            <div class="route-title">🏔️ 核心体验</div>
+                            <p>亲子自驾 · 城市文化 · 山水风光 · 民族文化 · 历史探索 · 自然观光 · 美食品鉴</p>
+                        </div>
+                        <div class="route-card">
+                            <div class="route-title">👨‍👩‍👧‍👦 亲子特色</div>
+                            <p>适合儿童的景点选择 · 充足的休息时间 · 互动体验项目 · 安全舒适的住宿</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="route" class="section">
+                <h2>🚗 自驾路线</h2>
+                <div class="route-info">
+                                                <h3>武汉 ⇄ 湘西自驾指南（经长沙、张家界、凤凰）</h3>
+                    
+                    <!-- 添加地图容器 -->
+                    <div id="route-map" style="width: 100%; height: 500px; margin: 2rem 0; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"></div>
+                    
+                    <!-- 地图控制面板 -->
+                    <div style="background: rgba(255, 255, 255, 0.9); padding: 1rem; border-radius: 10px; margin: 1rem 0; backdrop-filter: blur(10px);">
+                        <h4 style="color: #2a5298; margin-bottom: 1rem;">🗺️ 地图控制</h4>
+                        <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+                            <button onclick="showFullRoute()" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 0.5rem 1rem; border-radius: 20px; cursor: pointer; font-weight: bold;">显示完整路线</button>
+                            <button onclick="showDayRoute(1)" style="background: linear-gradient(135deg, #4facfe, #00f2fe); color: white; border: none; padding: 0.5rem 1rem; border-radius: 20px; cursor: pointer; font-weight: bold;">第1天路线</button>
+                            <button onclick="showDayRoute(2)" style="background: linear-gradient(135deg, #43e97b, #38f9d7); color: white; border: none; padding: 0.5rem 1rem; border-radius: 20px; cursor: pointer; font-weight: bold;">第2天路线</button>
+                            <button onclick="showDayRoute(3)" style="background: linear-gradient(135deg, #fa709a, #fee140); color: white; border: none; padding: 0.5rem 1rem; border-radius: 20px; cursor: pointer; font-weight: bold;">第3天路线</button>
+                            <button onclick="showDayRoute(4)" style="background: linear-gradient(135deg, #a8edea, #fed6e3); color: white; border: none; padding: 0.5rem 1rem; border-radius: 20px; cursor: pointer; font-weight: bold;">第4天路线</button>
+                            <button onclick="showDayRoute(5)" style="background: linear-gradient(135deg, #ff9a9e, #fecfef); color: white; border: none; padding: 0.5rem 1rem; border-radius: 20px; cursor: pointer; font-weight: bold;">第5天路线</button>
+                            <button onclick="showTrajectory()" style="background: linear-gradient(135deg, #ffd700, #ff8c00); color: white; border: none; padding: 0.5rem 1rem; border-radius: 20px; cursor: pointer; font-weight: bold;">🚗 轨迹动画</button>
+                            <button onclick="toggleTrajectory()" style="background: linear-gradient(135deg, #32cd32, #228b22); color: white; border: none; padding: 0.5rem 1rem; border-radius: 20px; cursor: pointer; font-weight: bold;">📍 轨迹显示</button>
+                            <button onclick="clearRoute()" style="background: linear-gradient(135deg, #ff6b6b, #ee5a24); color: white; border: none; padding: 0.5rem 1rem; border-radius: 20px; cursor: pointer; font-weight: bold;">清除路线</button>
+                        </div>
+                        
+                        <!-- 地图图例 -->
+                        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee;">
+                            <h5 style="color: #2a5298; margin-bottom: 0.5rem;">📍 地图图例</h5>
+                            <div style="display: flex; flex-wrap: wrap; gap: 1rem; font-size: 14px;">
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <img src="https://webapi.amap.com/theme/v1.3/markers/n/start.png" width="20" height="20" alt="起点">
+                                    <span>起点（武汉）</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <img src="https://webapi.amap.com/theme/v1.3/markers/n/end.png" width="20" height="20" alt="终点">
+                                    <span>终点（返程）</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <img src="https://webapi.amap.com/theme/v1.3/markers/n/mark_b.png" width="20" height="20" alt="城市">
+                                    <span>城市</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <img src="https://webapi.amap.com/theme/v1.3/markers/n/mark_r.png" width="20" height="20" alt="景点">
+                                    <span>景点</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <div style="width: 20px; height: 4px; background: linear-gradient(90deg, #ff6b6b, #4ecdc4); border-radius: 2px;"></div>
+                                    <span>轨迹路线</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <div style="width: 20px; height: 20px; background: #ffd700; border-radius: 50%; border: 2px solid #ff8c00;"></div>
+                                    <span>动画车辆</span>
+                                </div>
+                            </div>
+                            <p style="margin-top: 0.5rem; font-size: 12px; color: #666;">💡 点击地图上的标记可查看详细信息</p>
+                        </div>
+                        
+                        <!-- 轨迹信息面板 -->
+                        <div id="trajectory-info" style="margin-top: 1rem; padding: 1rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 10px; display: none;">
+                            <h5 style="margin-bottom: 0.5rem;">🚗 轨迹信息</h5>
+                            <div id="trajectory-details" style="font-size: 14px;">
+                                <p><strong>总里程：</strong><span id="total-distance">约870公里</span></p>
+                                <p><strong>预计时间：</strong><span id="total-time">11-13小时</span></p>
+                                <p><strong>主要路段：</strong><span id="main-segments">武汉→长沙→张家界→凤凰古城→返程</span></p>
+                                <p><strong>路况：</strong><span id="road-condition">全程高速，山区路段注意安全</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="route-details">
+                        <div class="route-card">
+                            <div class="route-title">🛣️ 推荐路线</div>
+                            <p><strong>武汉 → 长沙：</strong></p>
+                            <p>武汉 → 京港澳高速 → 长沙（约350公里，4小时）</p>
+                            <p><strong>长沙 → 张家界：</strong></p>
+                            <p>长沙 → 长张高速 → 张家界（约320公里，4小时）</p>
+                            <p><strong>张家界 → 凤凰：</strong></p>
+                            <p>张家界 → 张花高速 → 凤凰（约200公里，3小时）</p>
+                            <p><strong>总里程：</strong>约870公里</p>
+                            <p><strong>预计时间：</strong>11-13小时（含休息和游玩）</p>
+                        </div>
+                        <div class="route-card">
+                            <div class="route-title">⛽ 加油站点</div>
+                            <p><strong>主要服务区：</strong></p>
+                            <p>• 京港澳高速：孝感、岳阳</p>
+                            <p>• 长张高速：益阳、常德</p>
+                            <p>• 张花高速：吉首</p>
+                            <p>• 建议：山区路段提前加油</p>
+                        </div>
+                        <div class="route-card">
+                            <div class="route-title">🛣️ 路况信息</div>
+                            <p><strong>路况：</strong>全程高速，山区路段注意安全</p>
+                            <p><strong>收费：</strong>约¥500-600（往返）</p>
+                            <p><strong>建议：</strong>避开节假日高峰，注意山区天气</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="itinerary" class="section">
+                <h2>📅 详细行程</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="day-header">
+                            <span>🚗</span>
+                            <span>第一天：武汉出发，抵达长沙</span>
+                        </div>
+                        <div class="day-activities">
+                            <div class="activity">
+                                <div class="activity-time">上午 07:00 - 08:00</div>
+                                <div class="activity-content">
+                                    <strong>武汉出发准备</strong><br>
+                                    检查车况，加满油，准备出发
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">上午 08:00 - 12:00</div>
+                                <div class="activity-content">
+                                    <strong>前往长沙</strong><br>
+                                    武汉 → 京港澳高速 → 长沙（约350公里，4小时）
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">下午 12:00 - 13:30</div>
+                                <div class="activity-content">
+                                    <strong>长沙午餐</strong><br>
+                                    在长沙享用湘菜午餐，品尝臭豆腐、糖油粑粑等特色小吃
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">下午 14:00 - 17:00</div>
+                                <div class="activity-content">
+                                    <strong>长沙市区游览</strong><br>
+                                    游览橘子洲头、岳麓山、爱晚亭等景点
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">晚上 17:30 - 20:00</div>
+                                <div class="activity-content">
+                                    <strong>长沙夜游</strong><br>
+                                    在黄兴路步行街、坡子街品尝长沙特色美食，体验夜生活
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="day-header">
+                            <span>🏔️</span>
+                            <span>第二天：长沙亲子游，前往张家界</span>
+                        </div>
+                        <div class="day-activities">
+                            <div class="activity">
+                                <div class="activity-time">上午 08:00 - 09:00</div>
+                                <div class="activity-content">
+                                    <strong>酒店早餐</strong><br>
+                                    享用丰盛早餐，为一天的行程做好准备
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">上午 09:30 - 12:00</div>
+                                <div class="activity-content">
+                                    <strong>长沙世界之窗</strong><br>
+                                    带孩子们参观长沙世界之窗，体验各国建筑文化，互动娱乐项目
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">下午 12:00 - 13:30</div>
+                                <div class="activity-content">
+                                    <strong>午餐休息</strong><br>
+                                    在长沙享用最后一顿湘菜午餐
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">下午 14:00 - 18:00</div>
+                                <div class="activity-content">
+                                    <strong>前往张家界</strong><br>
+                                    长沙 → 长张高速 → 张家界（约320公里，4小时）
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">晚上 18:00 - 20:00</div>
+                                <div class="activity-content">
+                                    <strong>张家界入住</strong><br>
+                                    入住张家界酒店，享用当地特色晚餐
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="day-header">
+                            <span>🏔️</span>
+                            <span>第三天：张家界武陵源亲子游</span>
+                        </div>
+                        <div class="day-activities">
+                            <div class="activity">
+                                <div class="activity-time">上午 08:00 - 09:00</div>
+                                <div class="activity-content">
+                                    <strong>酒店早餐</strong><br>
+                                    享用丰盛早餐，为张家界山水游做好准备
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">上午 09:30 - 12:00</div>
+                                <div class="activity-content">
+                                    <strong>武陵源核心景区</strong><br>
+                                    带孩子们游览张家界国家森林公园，乘坐百龙天梯，欣赏袁家界、天子山美景
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">下午 12:00 - 13:30</div>
+                                <div class="activity-content">
+                                    <strong>景区午餐</strong><br>
+                                    在景区内享用午餐，品尝当地特色美食
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">下午 14:00 - 17:00</div>
+                                <div class="activity-content">
+                                    <strong>金鞭溪亲子游</strong><br>
+                                    带孩子们漫步金鞭溪，欣赏溪流风光，寻找野生猕猴，体验自然教育
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">晚上 17:30 - 20:00</div>
+                                <div class="activity-content">
+                                    <strong>张家界市区</strong><br>
+                                    返回市区，享用晚餐，体验当地夜生活
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="day-header">
+                            <span>🌉</span>
+                            <span>第四天：天门山亲子游，前往凤凰古城</span>
+                        </div>
+                        <div class="day-activities">
+                            <div class="activity">
+                                <div class="activity-time">上午 08:00 - 09:00</div>
+                                <div class="activity-content">
+                                    <strong>酒店早餐</strong><br>
+                                    享用丰盛早餐，为天门山游做好准备
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">上午 09:30 - 12:00</div>
+                                <div class="activity-content">
+                                    <strong>天门山景区</strong><br>
+                                    带孩子们乘坐世界最长高山客运索道，游览天门洞、玻璃栈道，体验刺激与美景
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">下午 12:00 - 13:30</div>
+                                <div class="activity-content">
+                                    <strong>午餐休息</strong><br>
+                                    在天门山享用午餐
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">下午 14:00 - 17:00</div>
+                                <div class="activity-content">
+                                    <strong>前往凤凰古城</strong><br>
+                                    张家界 → 张花高速 → 凤凰古城（约200公里，3小时）
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">下午 17:00 - 20:00</div>
+                                <div class="activity-content">
+                                    <strong>凤凰古城夜游</strong><br>
+                                    入住凤凰古城，体验古城夜景，沱江泛舟，品尝湘西特色美食
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="day-header">
+                            <span>🏛️</span>
+                            <span>第五天：芙蓉古镇+凤凰古城亲子游，返程武汉</span>
+                        </div>
+                        <div class="day-activities">
+                            <div class="activity">
+                                <div class="activity-time">上午 08:00 - 09:00</div>
+                                <div class="activity-content">
+                                    <strong>前往芙蓉古镇</strong><br>
+                                    凤凰古城 → 张花高速 → 芙蓉古镇（约50公里，1小时）
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">上午 09:00 - 11:00</div>
+                                <div class="activity-content">
+                                    <strong>芙蓉古镇游览</strong><br>
+                                    带孩子们游览芙蓉古镇，参观土家族吊脚楼、石板街、土司府等景点，体验土家族文化
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">上午 11:00 - 12:00</div>
+                                <div class="activity-content">
+                                    <strong>古镇午餐</strong><br>
+                                    在芙蓉古镇品尝土家族特色美食，如三下锅、土家腊肉等
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">下午 12:00 - 13:00</div>
+                                <div class="activity-content">
+                                    <strong>土家族文化体验</strong><br>
+                                    带孩子们体验土家族传统手工艺，如织锦、蜡染等，了解民族文化
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">下午 13:00 - 14:00</div>
+                                <div class="activity-content">
+                                    <strong>返回凤凰古城</strong><br>
+                                    芙蓉古镇 → 张花高速 → 凤凰古城（约50公里，1小时）
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">下午 14:00 - 16:00</div>
+                                <div class="activity-content">
+                                    <strong>凤凰古城游览</strong><br>
+                                    带孩子们游览凤凰古城，参观沈从文故居、虹桥、万名塔等景点，体验苗族文化
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">下午 16:00 - 17:30</div>
+                                <div class="activity-content">
+                                    <strong>沱江亲子游</strong><br>
+                                    带孩子们乘坐沱江游船，欣赏两岸风光，体验苗族风情
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">下午 17:30 - 18:30</div>
+                                <div class="activity-content">
+                                    <strong>购物休息</strong><br>
+                                    购买湘西特产，如腊肉、姜糖、银饰等，准备返程
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">晚上 18:30 - 19:30</div>
+                                <div class="activity-content">
+                                    <strong>特色晚餐</strong><br>
+                                    品尝湘西特色菜肴，如腊肉、酸汤鱼等
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <div class="activity-time">晚上 19:30+</div>
+                                <div class="activity-content">
+                                    <strong>开始返程</strong><br>
+                                    驾车开始返回武汉的行程，预计次日凌晨到达
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+            <section id="attractions" class="section">
+                <h2>🏛️ 精选景点</h2>
+                
+                <!-- 长沙景点详细版 -->
+                <div class="attractions-grid">
+                    <div class="attraction-card">
+                        <div class="attraction-image">🏛️ 长沙景点</div>
+                        <div class="attraction-content">
+                            <h3 class="attraction-title">长沙亲子景点</h3>
+                            <p class="attraction-description">湖南省会城市，拥有丰富的历史文化和现代都市魅力，适合亲子游玩。</p>
+                            <div class="attraction-highlights">
+                                <span class="highlight-tag">橘子洲头</span>
+                                <span class="highlight-tag">岳麓山</span>
+                                <span class="highlight-tag">爱晚亭</span>
+                                <span class="highlight-tag">长沙世界之窗</span>
+                                <span class="highlight-tag">湖南省博物馆</span>
+                                <span class="highlight-tag">长沙生态动物园</span>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                                <h4 style="color: #2a5298; margin-bottom: 0.5rem;">🎯 必游景点详情：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>橘子洲头：</strong>门票免费，建议傍晚前往，可欣赏湘江夜景</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>岳麓山：</strong>门票¥50，包含岳麓书院、爱晚亭，适合亲子登山</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>长沙世界之窗：</strong>门票¥120，各国建筑微缩景观，儿童互动项目丰富</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>湖南省博物馆：</strong>免费参观，马王堆文物展览，历史文化教育</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>长沙生态动物园：</strong>门票¥80，动物种类丰富，适合儿童观赏</li>
+                                </ul>
+                            </div>
+                            <div class="attraction-navigation">
+                                <a href="https://uri.amap.com/navigation?to=112.9823,28.1941,橘子洲头&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🧭 导航到橘子洲头
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=112.9314,28.1854,岳麓山&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🧭 导航到岳麓山
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=112.9823,28.1941,长沙世界之窗&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🧭 导航到世界之窗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="attraction-card">
+                        <div class="attraction-image">🏔️ 张家界武陵源</div>
+                        <div class="attraction-content">
+                            <h3 class="attraction-title">张家界武陵源</h3>
+                            <p class="attraction-description">世界自然遗产，拥有独特的石英砂岩峰林地貌，是亲子自然教育的绝佳场所。</p>
+                            <div class="attraction-highlights">
+                                <span class="highlight-tag">袁家界</span>
+                                <span class="highlight-tag">天子山</span>
+                                <span class="highlight-tag">金鞭溪</span>
+                                <span class="highlight-tag">百龙天梯</span>
+                                <span class="highlight-tag">黄石寨</span>
+                                <span class="highlight-tag">十里画廊</span>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                                <h4 style="color: #2a5298; margin-bottom: 0.5rem;">🎯 必游景点详情：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>袁家界：</strong>门票包含在武陵源套票中，观景台众多，适合拍照</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>天子山：</strong>海拔1262米，云海奇观，建议乘坐索道上山</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>金鞭溪：</strong>全长7.5公里，溪流清澈，野生猕猴出没，适合亲子徒步</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>百龙天梯：</strong>门票¥72，世界最高户外电梯，垂直高度335米</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>黄石寨：</strong>门票包含在套票中，观景台视野开阔，适合观赏日出</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>十里画廊：</strong>可乘坐小火车游览，沿途奇峰异石，适合儿童观赏</li>
+                                </ul>
+                            </div>
+                            <div class="attraction-navigation">
+                                <a href="https://uri.amap.com/navigation?to=110.4792,29.3274,张家界国家森林公园&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🧭 导航到武陵源
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=110.4792,29.3274,袁家界&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🧭 导航到袁家界
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=110.4792,29.3274,金鞭溪&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🧭 导航到金鞭溪
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="attraction-card">
+                        <div class="attraction-image">🌉 天门山</div>
+                        <div class="attraction-content">
+                            <h3 class="attraction-title">天门山</h3>
+                            <p class="attraction-description">拥有世界最长高山客运索道和天门洞奇观，是张家界最刺激的景区之一。</p>
+                            <div class="attraction-highlights">
+                                <span class="highlight-tag">天门洞</span>
+                                <span class="highlight-tag">玻璃栈道</span>
+                                <span class="highlight-tag">高山索道</span>
+                                <span class="highlight-tag">鬼谷栈道</span>
+                                <span class="highlight-tag">天门山寺</span>
+                                <span class="highlight-tag">通天大道</span>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                                <h4 style="color: #2a5298; margin-bottom: 0.5rem;">🎯 必游景点详情：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>天门洞：</strong>世界最高天然穿山溶洞，高131.5米，宽57米</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>玻璃栈道：</strong>门票¥5，长60米，悬空高度1430米，刺激体验</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>高山索道：</strong>门票¥258，全长7455米，世界最长高山客运索道</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>鬼谷栈道：</strong>门票¥5，全长1600米，悬崖峭壁上的栈道</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>天门山寺：</strong>始建于唐朝，佛教圣地，建筑古朴</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>通天大道：</strong>99道弯的盘山公路，被称为"天下第一公路奇观"</li>
+                                </ul>
+                            </div>
+                            <div class="attraction-navigation">
+                                <a href="https://uri.amap.com/navigation?to=110.4792,29.3274,天门山&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🧭 导航到天门山
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=110.4792,29.3274,天门洞&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🧭 导航到天门洞
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=110.4792,29.3274,天门山索道&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🧭 导航到索道站
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="attraction-card">
+                        <div class="attraction-image">🏘️ 芙蓉古镇</div>
+                        <div class="attraction-content">
+                            <h3 class="attraction-title">芙蓉古镇</h3>
+                            <p class="attraction-description">湘西四大古镇之一，保存完好的土家族古建筑群，浓郁的土家族文化氛围，是体验湘西民俗文化的绝佳去处。</p>
+                            <div class="attraction-highlights">
+                                <span class="highlight-tag">土司府</span>
+                                <span class="highlight-tag">吊脚楼群</span>
+                                <span class="highlight-tag">石板街</span>
+                                <span class="highlight-tag">土家族博物馆</span>
+                                <span class="highlight-tag">摆手堂</span>
+                                <span class="highlight-tag">土家织锦</span>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                                <h4 style="color: #2a5298; margin-bottom: 0.5rem;">🎯 必游景点详情：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>土司府：</strong>门票¥60，明清时期土司衙门，了解土司制度历史</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>吊脚楼群：</strong>门票¥30，典型的土家族建筑，依山而建，错落有致</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>石板街：</strong>门票免费，青石板铺就的古街，两旁店铺林立</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>土家族博物馆：</strong>门票¥20，展示土家族历史文化和民俗风情</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>摆手堂：</strong>门票¥15，土家族传统歌舞表演场所，可观看摆手舞</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>土家织锦：</strong>门票¥10，传统手工艺展示，可体验织锦制作</li>
+                                </ul>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #fff3cd; border-radius: 8px;">
+                                <h4 style="color: #856404; margin-bottom: 0.5rem;">👨‍👩‍👧‍👦 亲子特色：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;">• 土家族文化体验，适合儿童了解民族文化</li>
+                                    <li style="margin-bottom: 0.5rem;">• 传统手工艺制作，培养动手能力</li>
+                                    <li style="margin-bottom: 0.5rem;">• 摆手舞表演，互动性强</li>
+                                    <li style="margin-bottom: 0.5rem;">• 古镇环境安全，适合亲子游玩</li>
+                                </ul>
+                            </div>
+                            <div class="attraction-navigation">
+                                <a href="https://uri.amap.com/navigation?to=110.4792,29.3274,芙蓉古镇&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🧭 导航到芙蓉古镇
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=110.4792,29.3274,土司府&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🧭 导航到土司府
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=110.4792,29.3274,土家族博物馆&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🧭 导航到博物馆
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="attraction-card">
+                        <div class="attraction-image">🏛️ 凤凰古城</div>
+                        <div class="attraction-content">
+                            <h3 class="attraction-title">凤凰古城</h3>
+                            <p class="attraction-description">中国最美古城之一，保存完好的明清建筑，浓郁的苗族文化氛围。</p>
+                            <div class="attraction-highlights">
+                                <span class="highlight-tag">沈从文故居</span>
+                                <span class="highlight-tag">虹桥</span>
+                                <span class="highlight-tag">万名塔</span>
+                                <span class="highlight-tag">沱江泛舟</span>
+                                <span class="highlight-tag">古城墙</span>
+                                <span class="highlight-tag">杨家祠堂</span>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                                <h4 style="color: #2a5298; margin-bottom: 0.5rem;">🎯 必游景点详情：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>沈从文故居：</strong>门票¥45，文学大师故居，了解《边城》创作背景</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>虹桥：</strong>门票¥20，始建于明朝，横跨沱江，夜景绝美</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>万名塔：</strong>门票¥20，明代古塔，登塔可俯瞰古城全景</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>沱江泛舟：</strong>门票¥80，乘船游览沱江，欣赏两岸吊脚楼</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>古城墙：</strong>门票¥20，明清时期城墙，保存完好</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>杨家祠堂：</strong>门票¥20，清代建筑，了解当地宗族文化</li>
+                                </ul>
+                            </div>
+                            <div class="attraction-navigation">
+                                <a href="https://uri.amap.com/navigation?to=109.5994,27.9483,凤凰古城&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🧭 导航到凤凰古城
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=109.5994,27.9483,沈从文故居&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🧭 导航到沈从文故居
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=109.5994,27.9483,沱江码头&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🧭 导航到沱江码头
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="food" class="section">
+                <h2>🍽️ 美食指南</h2>
+                <div class="attractions-grid">
+                    <div class="attraction-card">
+                        <div class="attraction-image">🌶️ 长沙湘菜</div>
+                        <div class="attraction-content">
+                            <h3 class="attraction-title">长沙特色湘菜</h3>
+                            <p class="attraction-description">长沙是湘菜的发源地，以辣味著称，口味浓郁，令人回味无穷。</p>
+                            <div class="attraction-highlights">
+                                <span class="highlight-tag">臭豆腐</span>
+                                <span class="highlight-tag">糖油粑粑</span>
+                                <span class="highlight-tag">口味虾</span>
+                                <span class="highlight-tag">剁椒鱼头</span>
+                                <span class="highlight-tag">茶颜悦色</span>
+                                <span class="highlight-tag">文和友</span>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                                <h4 style="color: #2a5298; margin-bottom: 0.5rem;">🍽️ 必尝美食详情：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>臭豆腐：</strong>¥10-15/份，坡子街、黄兴路步行街都有，外酥内嫩</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>糖油粑粑：</strong>¥5-8/份，糯米制作，甜而不腻，适合儿童</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>口味虾：</strong>¥68-128/份，麻辣鲜香，文和友、火宫殿都有</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>剁椒鱼头：</strong>¥88-158/份，湘菜代表，辣味适中</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>茶颜悦色：</strong>¥15-25/杯，长沙网红奶茶，幽兰拿铁必点</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>文和友小龙虾：</strong>¥128-198/份，网红餐厅，环境复古</li>
+                                </ul>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #fff3cd; border-radius: 8px;">
+                                <h4 style="color: #856404; margin-bottom: 0.5rem;">📍 推荐餐厅：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>火宫殿：</strong>坡子街，百年老字号，¥50-100/人</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>文和友：</strong>海信广场，网红餐厅，¥80-150/人</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>茶颜悦色：</strong>各大商圈，网红奶茶，¥15-25/杯</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>费大厨辣椒炒肉：</strong>连锁店，正宗湘菜，¥60-100/人</li>
+                                </ul>
+                            </div>
+                            <div class="attraction-navigation">
+                                <a href="https://uri.amap.com/navigation?to=112.9823,28.1941,坡子街美食街&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🍽️ 导航到坡子街
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=112.9823,28.1941,黄兴路步行街&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🍽️ 导航到黄兴路
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=112.9823,28.1941,文和友&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🍽️ 导航到文和友
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="attraction-card">
+                        <div class="attraction-image">🍖 张家界美食</div>
+                        <div class="attraction-content">
+                            <h3 class="attraction-title">张家界特色美食</h3>
+                            <p class="attraction-description">融合了湘西菜和土家族特色，口味独特，营养丰富。</p>
+                            <div class="attraction-highlights">
+                                <span class="highlight-tag">三下锅</span>
+                                <span class="highlight-tag">土家腊肉</span>
+                                <span class="highlight-tag">酸汤鱼</span>
+                                <span class="highlight-tag">葛根粉</span>
+                                <span class="highlight-tag">岩耳炖鸡</span>
+                                <span class="highlight-tag">土家合渣</span>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                                <h4 style="color: #2a5298; margin-bottom: 0.5rem;">🍽️ 必尝美食详情：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>三下锅：</strong>¥68-128/份，土家族特色，三种肉类炖煮</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>土家腊肉：</strong>¥88-158/份，烟熏制作，香味浓郁</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>酸汤鱼：</strong>¥78-138/份，酸辣开胃，鱼肉鲜嫩</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>葛根粉：</strong>¥15-25/份，清凉解暑，适合夏季</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>岩耳炖鸡：</strong>¥98-168/份，山珍美味，营养丰富</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>土家合渣：</strong>¥28-48/份，豆腐渣制作，口感独特</li>
+                                </ul>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #fff3cd; border-radius: 8px;">
+                                <h4 style="color: #856404; margin-bottom: 0.5rem;">📍 推荐餐厅：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>土家风情园：</strong>武陵源区，正宗土家菜，¥60-120/人</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>张家界大峡谷餐厅：</strong>景区内，风景优美，¥80-150/人</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>天门山农家乐：</strong>天门山附近，农家风味，¥50-100/人</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>武陵源美食广场：</strong>武陵源区，多种选择，¥40-80/人</li>
+                                </ul>
+                            </div>
+                            <div class="attraction-navigation">
+                                <a href="https://uri.amap.com/navigation?to=110.4792,29.3274,张家界市区美食街&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🍽️ 导航到美食街
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=110.4792,29.3274,武陵源美食广场&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🍽️ 导航到武陵源
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=110.4792,29.3274,土家风情园&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🍽️ 导航到土家风情园
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="attraction-card">
+                        <div class="attraction-image">🍖 芙蓉古镇美食</div>
+                        <div class="attraction-content">
+                            <h3 class="attraction-title">芙蓉古镇特色美食</h3>
+                            <p class="attraction-description">土家族传统美食，融合了湘西菜和土家族特色，口味独特，营养丰富。</p>
+                            <div class="attraction-highlights">
+                                <span class="highlight-tag">土家三下锅</span>
+                                <span class="highlight-tag">土家腊肉</span>
+                                <span class="highlight-tag">土家合渣</span>
+                                <span class="highlight-tag">土家油茶</span>
+                                <span class="highlight-tag">土家糍粑</span>
+                                <span class="highlight-tag">土家米豆腐</span>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                                <h4 style="color: #2a5298; margin-bottom: 0.5rem;">🍽️ 必尝美食详情：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>土家三下锅：</strong>¥68-128/份，土家族传统名菜，三种肉类炖煮</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>土家腊肉：</strong>¥88-158/份，烟熏制作，香味浓郁，肥而不腻</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>土家合渣：</strong>¥28-48/份，豆腐渣制作，口感独特，营养丰富</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>土家油茶：</strong>¥15-25/份，传统饮品，暖胃养生</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>土家糍粑：</strong>¥10-20/份，糯米制作，甜而不腻，适合儿童</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>土家米豆腐：</strong>¥8-15/份，传统小吃，口感滑嫩</li>
+                                </ul>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #fff3cd; border-radius: 8px;">
+                                <h4 style="color: #856404; margin-bottom: 0.5rem;">📍 推荐餐厅：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>芙蓉古镇土家菜馆：</strong>古镇内，正宗土家菜，¥50-100/人</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>土司府餐厅：</strong>土司府内，环境优雅，¥80-150/人</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>石板街小吃：</strong>石板街上，传统小吃，¥20-50/人</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>土家风情园：</strong>古镇外，农家风味，¥40-80/人</li>
+                                </ul>
+                            </div>
+                            <div class="attraction-navigation">
+                                <a href="https://uri.amap.com/navigation?to=110.4792,29.3274,芙蓉古镇土家菜馆&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🍽️ 导航到土家菜馆
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=110.4792,29.3274,土司府餐厅&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🍽️ 导航到土司府餐厅
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=110.4792,29.3274,石板街小吃&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🍽️ 导航到石板街
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="attraction-card">
+                        <div class="attraction-image">🦆 凤凰美食</div>
+                        <div class="attraction-content">
+                            <h3 class="attraction-title">凤凰古城特色</h3>
+                            <p class="attraction-description">湘西苗族特色美食，口味酸辣，具有浓郁的地方特色。</p>
+                            <div class="attraction-highlights">
+                                <span class="highlight-tag">血粑鸭</span>
+                                <span class="highlight-tag">酸汤鱼</span>
+                                <span class="highlight-tag">姜糖</span>
+                                <span class="highlight-tag">腊肉</span>
+                                <span class="highlight-tag">苗家酸菜</span>
+                                <span class="highlight-tag">糯米酒</span>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                                <h4 style="color: #2a5298; margin-bottom: 0.5rem;">🍽️ 必尝美食详情：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>血粑鸭：</strong>¥88-158/份，凤凰名菜，鸭血与糯米制作</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>酸汤鱼：</strong>¥78-138/份，苗族特色，酸辣开胃</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>姜糖：</strong>¥15-25/份，传统小吃，姜味浓郁</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>腊肉：</strong>¥68-128/份，烟熏制作，香味浓郁</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>苗家酸菜：</strong>¥18-28/份，开胃小菜，酸辣爽口</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>糯米酒：</strong>¥25-45/瓶，传统米酒，度数适中</li>
+                                </ul>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #fff3cd; border-radius: 8px;">
+                                <h4 style="color: #856404; margin-bottom: 0.5rem;">📍 推荐餐厅：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>沱江人家：</strong>沱江边，风景优美，¥60-120/人</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>古城苗家菜：</strong>古城内，正宗苗菜，¥50-100/人</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>虹桥餐厅：</strong>虹桥附近，特色菜丰富，¥70-130/人</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>凤凰美食街：</strong>古城外，多种选择，¥40-80/人</li>
+                                </ul>
+                            </div>
+                            <div class="attraction-navigation">
+                                <a href="https://uri.amap.com/navigation?to=109.5994,27.9483,凤凰古城美食街&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🍽️ 导航到美食街
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=109.5994,27.9483,沱江边餐厅&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🍽️ 导航到沱江边
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=109.5994,27.9483,虹桥餐厅&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🍽️ 导航到虹桥餐厅
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="accommodation" class="section">
+                <h2>🏨 住宿推荐</h2>
+                <div class="attractions-grid">
+                    <div class="attraction-card">
+                        <div class="attraction-image">🏨 长沙住宿</div>
+                        <div class="attraction-content">
+                            <h3 class="attraction-title">长沙酒店推荐</h3>
+                            <p class="attraction-description">湖南省会城市，住宿选择丰富，从豪华酒店到经济型酒店应有尽有。</p>
+                            <div class="attraction-highlights">
+                                <span class="highlight-tag">五星级酒店</span>
+                                <span class="highlight-tag">四星级酒店</span>
+                                <span class="highlight-tag">经济型酒店</span>
+                                <span class="highlight-tag">亲子友好</span>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                                <h4 style="color: #2a5298; margin-bottom: 0.5rem;">🏨 推荐酒店详情：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>长沙君悦酒店：</strong>五星级，市中心，¥800-1200/晚，亲子设施齐全</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>长沙华天大酒店：</strong>四星级，交通便利，¥400-600/晚，服务优质</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>长沙如家酒店：</strong>经济型，连锁品牌，¥200-300/晚，性价比高</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>长沙橘子洲头酒店：</strong>景区附近，¥500-800/晚，风景优美</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>长沙世界之窗酒店：</strong>亲子主题，¥600-900/晚，儿童设施丰富</li>
+                                </ul>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #d1ecf1; border-radius: 8px;">
+                                <h4 style="color: #0c5460; margin-bottom: 0.5rem;">💡 住宿贴士：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;">• 建议选择市中心或地铁沿线酒店</li>
+                                    <li style="margin-bottom: 0.5rem;">• 亲子出行建议选择有儿童设施的酒店</li>
+                                    <li style="margin-bottom: 0.5rem;">• 提前预订，节假日房价较高</li>
+                                    <li style="margin-bottom: 0.5rem;">• 注意酒店停车位是否充足</li>
+                                </ul>
+                            </div>
+                            <div class="attraction-navigation">
+                                <a href="https://uri.amap.com/navigation?to=112.9823,28.1941,长沙君悦酒店&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🏨 导航到君悦酒店
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=112.9823,28.1941,长沙华天大酒店&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🏨 导航到华天大酒店
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=112.9823,28.1941,长沙世界之窗酒店&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🏨 导航到世界之窗酒店
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="attraction-card">
+                        <div class="attraction-image">🏔️ 张家界住宿</div>
+                        <div class="attraction-content">
+                            <h3 class="attraction-title">张家界酒店推荐</h3>
+                            <p class="attraction-description">景区周边住宿选择多样，从豪华度假酒店到农家乐都有，建议选择景区附近。</p>
+                            <div class="attraction-highlights">
+                                <span class="highlight-tag">景区酒店</span>
+                                <span class="highlight-tag">度假酒店</span>
+                                <span class="highlight-tag">农家乐</span>
+                                <span class="highlight-tag">亲子友好</span>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                                <h4 style="color: #2a5298; margin-bottom: 0.5rem;">🏨 推荐酒店详情：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>张家界青和锦江国际酒店：</strong>五星级，市区，¥600-1000/晚，设施完善</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>武陵源青和锦江国际酒店：</strong>四星级，景区附近，¥500-800/晚，风景优美</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>张家界天门山度假酒店：</strong>度假型，天门山附近，¥400-700/晚，环境幽静</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>张家界土家风情园：</strong>特色民宿，¥300-500/晚，体验土家文化</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>张家界大峡谷农家乐：</strong>农家乐，¥150-300/晚，价格实惠</li>
+                                </ul>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #d1ecf1; border-radius: 8px;">
+                                <h4 style="color: #0c5460; margin-bottom: 0.5rem;">💡 住宿贴士：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;">• 建议选择武陵源区或天门山附近酒店</li>
+                                    <li style="margin-bottom: 0.5rem;">• 景区内酒店价格较高但交通便利</li>
+                                    <li style="margin-bottom: 0.5rem;">• 农家乐价格实惠但设施相对简单</li>
+                                    <li style="margin-bottom: 0.5rem;">• 注意酒店是否提供景区接送服务</li>
+                                </ul>
+                            </div>
+                            <div class="attraction-navigation">
+                                <a href="https://uri.amap.com/navigation?to=110.4792,29.3274,张家界青和锦江国际酒店&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🏨 导航到青和锦江酒店
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=110.4792,29.3274,武陵源青和锦江国际酒店&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🏨 导航到武陵源酒店
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=110.4792,29.3274,张家界土家风情园&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🏨 导航到土家风情园
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="attraction-card">
+                        <div class="attraction-image">🏘️ 芙蓉古镇住宿</div>
+                        <div class="attraction-content">
+                            <h3 class="attraction-title">芙蓉古镇住宿</h3>
+                            <p class="attraction-description">古镇内住宿以特色民宿和土家族客栈为主，体验当地文化，感受古镇风情。</p>
+                            <div class="attraction-highlights">
+                                <span class="highlight-tag">土家客栈</span>
+                                <span class="highlight-tag">古镇民宿</span>
+                                <span class="highlight-tag">特色客栈</span>
+                                <span class="highlight-tag">文化体验</span>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                                <h4 style="color: #2a5298; margin-bottom: 0.5rem;">🏨 推荐住宿详情：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>芙蓉古镇土司府客栈：</strong>土司府内，¥300-500/晚，文化氛围浓厚</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>芙蓉古镇吊脚楼客栈：</strong>吊脚楼群，¥250-400/晚，传统建筑体验</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>芙蓉古镇石板街客栈：</strong>石板街上，¥200-350/晚，位置便利</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>芙蓉古镇土家风情园：</strong>古镇外，¥150-300/晚，农家风味</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>芙蓉古镇摆手堂客栈：</strong>摆手堂附近，¥180-320/晚，文化体验</li>
+                                </ul>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #d1ecf1; border-radius: 8px;">
+                                <h4 style="color: #0c5460; margin-bottom: 0.5rem;">💡 住宿贴士：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;">• 古镇内客栈多为木质结构，隔音效果一般</li>
+                                    <li style="margin-bottom: 0.5rem;">• 土司府内客栈价格较高但文化体验丰富</li>
+                                    <li style="margin-bottom: 0.5rem;">• 建议提前预订，旺季房源紧张</li>
+                                    <li style="margin-bottom: 0.5rem;">• 注意客栈是否提供停车位</li>
+                                </ul>
+                            </div>
+                            <div class="attraction-navigation">
+                                <a href="https://uri.amap.com/navigation?to=110.4792,29.3274,芙蓉古镇土司府客栈&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🏨 导航到土司府客栈
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=110.4792,29.3274,芙蓉古镇吊脚楼客栈&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🏨 导航到吊脚楼客栈
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=110.4792,29.3274,芙蓉古镇土家风情园&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🏨 导航到土家风情园
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="attraction-card">
+                        <div class="attraction-image">🏛️ 凤凰住宿</div>
+                        <div class="attraction-content">
+                            <h3 class="attraction-title">凤凰古城住宿</h3>
+                            <p class="attraction-description">古城内住宿以特色民宿为主，体验当地文化，感受古城风情。</p>
+                            <div class="attraction-highlights">
+                                <span class="highlight-tag">古城民宿</span>
+                                <span class="highlight-tag">江边客栈</span>
+                                <span class="highlight-tag">特色客栈</span>
+                                <span class="highlight-tag">文化体验</span>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                                <h4 style="color: #2a5298; margin-bottom: 0.5rem;">🏨 推荐住宿详情：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>凤凰古城沱江人家：</strong>江边客栈，¥400-600/晚，风景绝佳</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>凤凰古城虹桥客栈：</strong>古城中心，¥300-500/晚，位置便利</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>凤凰古城万名塔客栈：</strong>古塔附近，¥250-400/晚，文化氛围浓</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>凤凰古城沈从文故居客栈：</strong>文学主题，¥350-550/晚，文化体验</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>凤凰古城苗家客栈：</strong>苗族特色，¥200-350/晚，体验苗文化</li>
+                                </ul>
+                            </div>
+                            <div style="margin: 1rem 0; padding: 1rem; background: #d1ecf1; border-radius: 8px;">
+                                <h4 style="color: #0c5460; margin-bottom: 0.5rem;">💡 住宿贴士：</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;">• 古城内客栈多为木质结构，隔音效果一般</li>
+                                    <li style="margin-bottom: 0.5rem;">• 江边客栈风景好但价格较高</li>
+                                    <li style="margin-bottom: 0.5rem;">• 建议提前预订，旺季房源紧张</li>
+                                    <li style="margin-bottom: 0.5rem;">• 注意客栈是否提供停车位</li>
+                                </ul>
+                            </div>
+                            <div class="attraction-navigation">
+                                <a href="https://uri.amap.com/navigation?to=109.5994,27.9483,凤凰古城沱江人家&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🏨 导航到沱江人家
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=109.5994,27.9483,凤凰古城虹桥客栈&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🏨 导航到虹桥客栈
+                                </a>
+                                <a href="https://uri.amap.com/navigation?to=109.5994,27.9483,凤凰古城苗家客栈&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=0" target="_blank" class="nav-button">
+                                    🏨 导航到苗家客栈
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="budget" class="section">
+                <h2>💰 费用预算</h2>
+                <table class="budget-table">
+                    <thead>
+                        <tr>
+                            <th>项目</th>
+                            <th>经济型</th>
+                            <th>舒适型</th>
+                            <th>豪华型</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>油费（往返）</strong></td>
+                            <td>¥600-800</td>
+                            <td>¥800-1000</td>
+                            <td>¥1000-1200</td>
+                        </tr>
+                        <tr>
+                            <td><strong>过路费（往返）</strong></td>
+                            <td>¥500-600</td>
+                            <td>¥500-600</td>
+                            <td>¥500-600</td>
+                        </tr>
+                        <tr>
+                            <td><strong>住宿（4晚）</strong></td>
+                            <td>¥800-1,200</td>
+                            <td>¥1,200-2,400</td>
+                            <td>¥2,400-4,800</td>
+                        </tr>
+                        <tr>
+                            <td><strong>餐饮</strong></td>
+                            <td>¥600-800</td>
+                            <td>¥1,000-1,500</td>
+                            <td>¥1,500-2,500</td>
+                        </tr>
+                        <tr>
+                            <td><strong>景点门票</strong></td>
+                            <td>¥800-1,000</td>
+                            <td>¥1,000-1,200</td>
+                            <td>¥1,200-1,500</td>
+                        </tr>
+                        <tr>
+                            <td><strong>停车费</strong></td>
+                            <td>¥50-100</td>
+                            <td>¥100-200</td>
+                            <td>¥200-300</td>
+                        </tr>
+                        <tr>
+                            <td><strong>购物纪念品</strong></td>
+                            <td>¥200-500</td>
+                            <td>¥500-1,000</td>
+                            <td>¥1,000-2,000</td>
+                        </tr>
+                        <tr style="background: #f0f8ff;">
+                            <td><strong>总计</strong></td>
+                            <td class="price-highlight">¥3,550-4,900</td>
+                            <td class="price-highlight">¥5,100-6,900</td>
+                            <td class="price-highlight">¥6,800-11,900</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="tips" class="section">
+                <h2>💡 实用贴士</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">🚗</div>
+                        <div class="tip-title">车辆准备</div>
+                        <p>出发前检查车况，确保轮胎、刹车、机油等状态良好。山区路段注意安全。</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">⛽</div>
+                        <div class="tip-title">加油规划</div>
+                        <p>提前规划加油站点，山区路段加油站较少，建议在油量低于1/2时加油。</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">🏔️</div>
+                        <div class="tip-title">山区驾驶</div>
+                        <p>山区路段弯道较多，注意减速慢行，保持安全距离，避免疲劳驾驶。</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">🌤️</div>
+                        <div class="tip-title">天气关注</div>
+                        <p>出发前查看沿途天气，特别是山区天气变化较大，注意防寒保暖。</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">🎫</div>
+                        <div class="tip-title">门票预订</div>
+                        <p>张家界、天门山等热门景区建议提前预订门票，避免排队等待。</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">👶</div>
+                        <div class="tip-title">亲子安全</div>
+                        <p>带小孩游览时注意安全，特别是在玻璃栈道等刺激项目上要谨慎。</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">🍽️</div>
+                        <div class="tip-title">饮食注意</div>
+                        <p>湘菜口味较重，注意小孩的饮食适应，可准备一些清淡食物。</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">📱</div>
+                        <div class="tip-title">实用APP</div>
+                        <p>推荐下载高德地图、百度地图、大众点评等，方便导航和查找美食。</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">🛍️</div>
+                        <div class="tip-title">购物特产</div>
+                        <p>湘西特产有腊肉、姜糖、银饰等。选择正规商店购买，注意保质期。</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">🏥</div>
+                        <div class="tip-title">应急信息</div>
+                        <p>记住当地医院和警察局电话。建议购买旅游保险，保障出行安全。</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer style="background: #2a5298; color: white; text-align: center; padding: 2rem 0; margin-top: 3rem;">
+        <div class="container">
+                                    <p>&copy; 2024 武汉到湘西五日游攻略 | 亲子自驾版专业定制</p>
+            <p style="margin-top: 0.5rem; opacity: 0.8;">让每一次亲子自驾都成为美好回忆 🚗👨‍👩‍👧‍👦🏔️</p>
+        </div>
+    </footer>
+
+    <script>
+        // 地图相关变量
+        let map;
+        let driving;
+        let markers = [];
+        let currentRoute = null;
+        let trajectoryPolyline = null;
+        let animationMarker = null;
+        let isTrajectoryVisible = false;
+        let trajectoryAnimation = null;
+
+        // 路线数据
+        const routeData = {
+            fullRoute: {
+                name: "完整路线",
+                points: [
+                    {name: "武汉", lnglat: [114.298572, 30.584355], day: 1, type: "start", description: "出发地，湖北省会城市"},
+                    {name: "长沙", lnglat: [112.982279, 28.19409], day: 1, type: "city", description: "湖南省会，橘子洲头、岳麓山"},
+                    {name: "张家界", lnglat: [110.479191, 29.117096], day: 2, type: "city", description: "武陵源景区，世界自然遗产"},
+                    {name: "天门山", lnglat: [110.479191, 29.117096], day: 4, type: "attraction", description: "天门洞、玻璃栈道、高山索道"},
+                    {name: "凤凰古城", lnglat: [109.599191, 27.948308], day: 4, type: "city", description: "沱江泛舟、沈从文故居"},
+                    {name: "芙蓉古镇", lnglat: [109.599191, 27.948308], day: 5, type: "attraction", description: "土家族文化、吊脚楼群"}
+                ]
+            },
+            day1: {
+                name: "第1天：武汉→长沙",
+                points: [
+                    {name: "武汉", lnglat: [114.298572, 30.584355], type: "start", description: "出发地，湖北省会城市"},
+                    {name: "长沙", lnglat: [112.982279, 28.19409], type: "city", description: "湖南省会，橘子洲头、岳麓山"}
+                ]
+            },
+            day2: {
+                name: "第2天：长沙→张家界",
+                points: [
+                    {name: "长沙", lnglat: [112.982279, 28.19409], type: "city", description: "湖南省会，橘子洲头、岳麓山"},
+                    {name: "张家界", lnglat: [110.479191, 29.117096], type: "city", description: "武陵源景区，世界自然遗产"}
+                ]
+            },
+            day3: {
+                name: "第3天：张家界武陵源",
+                points: [
+                    {name: "张家界市区", lnglat: [110.479191, 29.117096], type: "city", description: "张家界市区"},
+                    {name: "武陵源景区", lnglat: [110.479191, 29.3274], type: "attraction", description: "武陵源核心景区"}
+                ]
+            },
+            day4: {
+                name: "第4天：天门山→凤凰古城",
+                points: [
+                    {name: "张家界", lnglat: [110.479191, 29.117096], type: "city", description: "张家界市区"},
+                    {name: "天门山", lnglat: [110.479191, 29.117096], type: "attraction", description: "天门洞、玻璃栈道"},
+                    {name: "凤凰古城", lnglat: [109.599191, 27.948308], type: "city", description: "沱江泛舟、沈从文故居"}
+                ]
+            },
+            day5: {
+                name: "第5天：芙蓉古镇→返程",
+                points: [
+                    {name: "凤凰古城", lnglat: [109.599191, 27.948308], type: "city", description: "沱江泛舟、沈从文故居"},
+                    {name: "芙蓉古镇", lnglat: [109.599191, 27.948308], type: "attraction", description: "土家族文化、吊脚楼群"},
+                    {name: "武汉", lnglat: [114.298572, 30.584355], type: "end", description: "返回武汉"}
+                ]
+            }
+        };
+
+        // 初始化地图
+        function initMap() {
+            map = new AMap.Map('route-map', {
+                zoom: 7,
+                center: [112.982279, 28.19409], // 以长沙为中心
+                mapStyle: 'amap://styles/normal'
+            });
+
+            // 初始化驾车路线规划
+            driving = new AMap.Driving({
+                map: map,
+                policy: AMap.DrivingPolicy.LEAST_TIME
+            });
+
+            // 默认显示完整路线
+            showFullRoute();
+        }
+
+        // 清除所有标记和路线
+        function clearRoute() {
+            if (markers.length > 0) {
+                markers.forEach(marker => {
+                    map.remove(marker);
+                });
+                markers = [];
+            }
+            if (currentRoute) {
+                map.remove(currentRoute);
+                currentRoute = null;
+            }
+            if (trajectoryPolyline) {
+                map.remove(trajectoryPolyline);
+                trajectoryPolyline = null;
+            }
+            if (animationMarker) {
+                map.remove(animationMarker);
+                animationMarker = null;
+            }
+            if (trajectoryAnimation) {
+                trajectoryAnimation.stop();
+                trajectoryAnimation = null;
+            }
+            isTrajectoryVisible = false;
+            document.getElementById('trajectory-info').style.display = 'none';
+        }
+
+        // 添加标记
+        function addMarkers(points) {
+            points.forEach((point, index) => {
+                let iconUrl = '';
+                let iconSize = [32, 32];
+                
+                switch(point.type) {
+                    case 'start':
+                        iconUrl = 'https://webapi.amap.com/theme/v1.3/markers/n/start.png';
+                        break;
+                    case 'end':
+                        iconUrl = 'https://webapi.amap.com/theme/v1.3/markers/n/end.png';
+                        break;
+                    case 'city':
+                        iconUrl = 'https://webapi.amap.com/theme/v1.3/markers/n/mark_b.png';
+                        break;
+                    case 'attraction':
+                        iconUrl = 'https://webapi.amap.com/theme/v1.3/markers/n/mark_r.png';
+                        break;
+                    default:
+                        iconUrl = 'https://webapi.amap.com/theme/v1.3/markers/n/mark_bs.png';
+                }
+
+                const marker = new AMap.Marker({
+                    position: point.lnglat,
+                    icon: new AMap.Icon({
+                        size: iconSize,
+                        image: iconUrl,
+                        imageSize: iconSize
+                    }),
+                    title: point.name
+                });
+
+                // 添加信息窗口
+                const infoWindow = new AMap.InfoWindow({
+                    content: `
+                        <div style="padding: 10px;">
+                            <h4 style="margin: 0 0 5px 0; color: #2a5298;">${point.name}</h4>
+                            <p style="margin: 0; font-size: 12px; color: #666;">
+                                ${point.type === 'start' ? '起点' : 
+                                  point.type === 'end' ? '终点' : 
+                                  point.type === 'city' ? '城市' : '景点'}
+                            </p>
+                            ${point.day ? `<p style="margin: 5px 0 0 0; font-size: 12px; color: #667eea;">第${point.day}天</p>` : ''}
+                            ${point.description ? `<p style="margin: 5px 0 0 0; font-size: 11px; color: #888;">${point.description}</p>` : ''}
+                        </div>
+                    `,
+                    offset: new AMap.Pixel(0, -30)
+                });
+
+                marker.on('click', () => {
+                    infoWindow.open(map, marker.getPosition());
+                });
+
+                map.add(marker);
+                markers.push(marker);
+            });
+        }
+
+        // 显示完整路线
+        function showFullRoute() {
+            clearRoute();
+            const route = routeData.fullRoute;
+            
+            // 添加所有标记
+            addMarkers(route.points);
+            
+            // 规划路线
+            const waypoints = route.points.slice(1, -1).map(p => p.lnglat);
+            driving.search(route.points[0].lnglat, route.points[route.points.length - 1].lnglat, {
+                waypoints: waypoints
+            }, (status, result) => {
+                if (status === 'complete') {
+                    currentRoute = result.routes[0];
+                    
+                    // 使用真实路线数据创建轨迹
+                    if (result.routes && result.routes[0] && result.routes[0].steps) {
+                        const realPath = [];
+                        result.routes[0].steps.forEach(step => {
+                            if (step.path && step.path.length > 0) {
+                                realPath.push(...step.path);
+                            }
+                        });
+                        
+                        if (realPath.length > 1) {
+                            // 创建真实轨迹路线
+                            trajectoryPolyline = new AMap.Polyline({
+                                path: realPath,
+                                strokeColor: '#667eea',
+                                strokeWeight: 6,
+                                strokeOpacity: 0.8,
+                                strokeStyle: 'solid',
+                                lineJoin: 'round',
+                                lineCap: 'round',
+                                zIndex: 50
+                            });
+                            
+                            map.add(trajectoryPolyline);
+                            
+                            // 创建动画车辆标记
+                            const carIcon = new AMap.Icon({
+                                size: new AMap.Size(32, 32),
+                                image: 'data:image/svg+xml;base64,' + btoa(`
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <circle cx="16" cy="16" r="14" fill="#667eea" stroke="#764ba2" stroke-width="2"/>
+                                        <circle cx="16" cy="16" r="8" fill="#764ba2"/>
+                                        <circle cx="16" cy="16" r="4" fill="#fff"/>
+                                    </svg>
+                                `),
+                                imageSize: new AMap.Size(32, 32)
+                            });
+                            
+                            animationMarker = new AMap.Marker({
+                                position: realPath[0],
+                                icon: carIcon,
+                                offset: new AMap.Pixel(-16, -16),
+                                zIndex: 100
+                            });
+                            
+                            map.add(animationMarker);
+                            
+                            // 创建动画
+                            trajectoryAnimation = new AMap.AnimationMarker({
+                                map: map,
+                                position: realPath[0],
+                                icon: carIcon,
+                                offset: new AMap.Pixel(-16, -16),
+                                zIndex: 100
+                            });
+                            
+                            // 开始动画
+                            trajectoryAnimation.moveAlong(realPath, {
+                                duration: 12000, // 12秒完成完整轨迹
+                                delay: 1000,     // 延迟1秒开始
+                                autoRotation: true
+                            });
+                            
+                            isTrajectoryVisible = true;
+                            showTrajectoryInfo('full');
+                        }
+                    }
+                    
+                    map.setFitView();
+                }
+            });
+        }
+
+        // 显示指定天数的路线
+        function showDayRoute(day) {
+            clearRoute();
+            const route = routeData[`day${day}`];
+            
+            if (!route) return;
+            
+            // 添加标记
+            addMarkers(route.points);
+            
+            // 规划路线
+            const waypoints = route.points.slice(1, -1).map(p => p.lnglat);
+            driving.search(route.points[0].lnglat, route.points[route.points.length - 1].lnglat, {
+                waypoints: waypoints
+            }, (status, result) => {
+                if (status === 'complete') {
+                    currentRoute = result.routes[0];
+                    
+                    // 使用真实路线数据创建轨迹
+                    if (result.routes && result.routes[0] && result.routes[0].steps) {
+                        const realPath = [];
+                        result.routes[0].steps.forEach(step => {
+                            if (step.path && step.path.length > 0) {
+                                realPath.push(...step.path);
+                            }
+                        });
+                        
+                        if (realPath.length > 1) {
+                            // 创建真实轨迹路线
+                            trajectoryPolyline = new AMap.Polyline({
+                                path: realPath,
+                                strokeColor: '#4facfe',
+                                strokeWeight: 6,
+                                strokeOpacity: 0.8,
+                                strokeStyle: 'solid',
+                                lineJoin: 'round',
+                                lineCap: 'round',
+                                zIndex: 50
+                            });
+                            
+                            map.add(trajectoryPolyline);
+                            
+                            // 创建动画车辆标记
+                            const carIcon = new AMap.Icon({
+                                size: new AMap.Size(32, 32),
+                                image: 'data:image/svg+xml;base64,' + btoa(`
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <circle cx="16" cy="16" r="14" fill="#4facfe" stroke="#00f2fe" stroke-width="2"/>
+                                        <circle cx="16" cy="16" r="8" fill="#00f2fe"/>
+                                        <circle cx="16" cy="16" r="4" fill="#fff"/>
+                                    </svg>
+                                `),
+                                imageSize: new AMap.Size(32, 32)
+                            });
+                            
+                            animationMarker = new AMap.Marker({
+                                position: realPath[0],
+                                icon: carIcon,
+                                offset: new AMap.Pixel(-16, -16),
+                                zIndex: 100
+                            });
+                            
+                            map.add(animationMarker);
+                            
+                            // 创建动画
+                            trajectoryAnimation = new AMap.AnimationMarker({
+                                map: map,
+                                position: realPath[0],
+                                icon: carIcon,
+                                offset: new AMap.Pixel(-16, -16),
+                                zIndex: 100
+                            });
+                            
+                            // 开始动画
+                            trajectoryAnimation.moveAlong(realPath, {
+                                duration: 8000, // 8秒完成当天轨迹
+                                delay: 500,     // 延迟0.5秒开始
+                                autoRotation: true
+                            });
+                            
+                            isTrajectoryVisible = true;
+                            showTrajectoryInfo('day', day);
+                        }
+                    }
+                    
+                    map.setFitView();
+                }
+            });
+        }
+
+        // 显示轨迹路线
+        function showTrajectory() {
+            clearRoute();
+            const route = routeData.fullRoute;
+            
+            // 添加标记
+            addMarkers(route.points);
+            
+            // 规划路线获取真实轨迹
+            const waypoints = route.points.slice(1, -1).map(p => p.lnglat);
+            driving.search(route.points[0].lnglat, route.points[route.points.length - 1].lnglat, {
+                waypoints: waypoints
+            }, (status, result) => {
+                if (status === 'complete') {
+                    currentRoute = result.routes[0];
+                    
+                    // 使用真实路线数据创建轨迹
+                    if (result.routes && result.routes[0] && result.routes[0].steps) {
+                        const realPath = [];
+                        result.routes[0].steps.forEach(step => {
+                            if (step.path && step.path.length > 0) {
+                                realPath.push(...step.path);
+                            }
+                        });
+                        
+                        if (realPath.length > 1) {
+                            // 创建真实轨迹路线
+                            trajectoryPolyline = new AMap.Polyline({
+                                path: realPath,
+                                strokeColor: '#ff6b6b',
+                                strokeWeight: 6,
+                                strokeOpacity: 0.8,
+                                strokeStyle: 'solid',
+                                lineJoin: 'round',
+                                lineCap: 'round',
+                                zIndex: 50
+                            });
+                            
+                            map.add(trajectoryPolyline);
+                            
+                            // 创建动画车辆标记
+                            const carIcon = new AMap.Icon({
+                                size: new AMap.Size(32, 32),
+                                image: 'data:image/svg+xml;base64,' + btoa(`
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <circle cx="16" cy="16" r="14" fill="#ffd700" stroke="#ff8c00" stroke-width="2"/>
+                                        <circle cx="16" cy="16" r="8" fill="#ff8c00"/>
+                                        <circle cx="16" cy="16" r="4" fill="#fff"/>
+                                    </svg>
+                                `),
+                                imageSize: new AMap.Size(32, 32)
+                            });
+                            
+                            animationMarker = new AMap.Marker({
+                                position: realPath[0],
+                                icon: carIcon,
+                                offset: new AMap.Pixel(-16, -16),
+                                zIndex: 100
+                            });
+                            
+                            map.add(animationMarker);
+                            
+                            // 创建动画
+                            trajectoryAnimation = new AMap.AnimationMarker({
+                                map: map,
+                                position: realPath[0],
+                                icon: carIcon,
+                                offset: new AMap.Pixel(-16, -16),
+                                zIndex: 100
+                            });
+                            
+                            // 开始动画
+                            trajectoryAnimation.moveAlong(realPath, {
+                                duration: 15000, // 15秒完成整个轨迹
+                                delay: 1000,     // 延迟1秒开始
+                                autoRotation: true
+                            });
+                            
+                            isTrajectoryVisible = true;
+                            showTrajectoryInfo('full');
+                        }
+                    }
+                    
+                    map.setFitView();
+                }
+            });
+        }
+
+        // 切换轨迹显示
+        function toggleTrajectory() {
+            if (isTrajectoryVisible) {
+                if (trajectoryPolyline) {
+                    map.remove(trajectoryPolyline);
+                    trajectoryPolyline = null;
+                }
+                if (animationMarker) {
+                    map.remove(animationMarker);
+                    animationMarker = null;
+                }
+                if (trajectoryAnimation) {
+                    trajectoryAnimation.stop();
+                    trajectoryAnimation = null;
+                }
+                isTrajectoryVisible = false;
+                document.getElementById('trajectory-info').style.display = 'none';
+            } else {
+                showTrajectory();
+            }
+        }
+
+        // 显示轨迹信息
+        function showTrajectoryInfo(routeType, day = null) {
+            const infoPanel = document.getElementById('trajectory-info');
+            const distanceSpan = document.getElementById('total-distance');
+            const timeSpan = document.getElementById('total-time');
+            const segmentsSpan = document.getElementById('main-segments');
+            const conditionSpan = document.getElementById('road-condition');
+            
+            if (routeType === 'full') {
+                distanceSpan.textContent = '约870公里';
+                timeSpan.textContent = '11-13小时';
+                segmentsSpan.textContent = '武汉→长沙→张家界→凤凰古城→返程';
+                conditionSpan.textContent = '全程高速，山区路段注意安全';
+            } else if (routeType === 'day' && day) {
+                const dayInfo = {
+                    1: { distance: '约350公里', time: '4小时', segments: '武汉→长沙', condition: '京港澳高速，路况良好' },
+                    2: { distance: '约320公里', time: '4小时', segments: '长沙→张家界', condition: '长张高速，山区路段' },
+                    3: { distance: '约30公里', time: '1小时', segments: '张家界市区→武陵源', condition: '景区道路，注意限速' },
+                    4: { distance: '约200公里', time: '3小时', segments: '张家界→天门山→凤凰古城', condition: '张花高速，山区路段' },
+                    5: { distance: '约870公里', time: '11-13小时', segments: '凤凰古城→芙蓉古镇→返程武汉', condition: '返程路线，注意疲劳驾驶' }
+                };
+                
+                const info = dayInfo[day];
+                if (info) {
+                    distanceSpan.textContent = info.distance;
+                    timeSpan.textContent = info.time;
+                    segmentsSpan.textContent = info.segments;
+                    conditionSpan.textContent = info.condition;
+                }
+            }
+            
+            infoPanel.style.display = 'block';
+        }
+
+        // 平滑滚动效果
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化地图
+            initMap();
+            
+            // 添加滚动动画效果
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // 观察所有section元素
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html> 
